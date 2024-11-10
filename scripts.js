@@ -5,7 +5,11 @@ export function sum(a, b) {
 }
 
 export function capitalize(string) {
-  return "Capital";
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+export function reverseString(string) {
+  return string.split("").reverse().join("");
 }
 
 //module.exports = capitalize;

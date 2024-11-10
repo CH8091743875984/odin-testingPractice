@@ -28,4 +28,25 @@ export function calculator(operator, a, b) {
   return null;
 }
 
-//module.exports = capitalize;
+function shiftChar(char, x) {
+  const isUpperCase = char >= "A" && char <= "Z";
+  const isLowerCase = char >= "a" && char <= "z";
+
+  if (isUpperCase) {
+    return String.fromCharCode(((char.charCodeAt(0) - 65 + x) % 26) + 65);
+  }
+
+  if (isLowerCase) {
+    return String.fromCharCode(((char.charCodeAt(0) - 97 + x) % 26) + 97);
+  }
+
+  // If it's not a letter, return the character unchanged
+  return char;
+}
+
+export function caesarCipher(string, shiftFactor) {
+  return string
+    .split("")
+    .map((char) => shiftChar(char, shiftFactor))
+    .join("");
+}

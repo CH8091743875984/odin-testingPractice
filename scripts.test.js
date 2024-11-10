@@ -21,3 +21,15 @@ test("calculator", () => {
   expect(jestTest.calculator("multiply", 10, 20)).toBe(200);
   expect(jestTest.calculator("not an operator", 10, 20)).toBeNull();
 });
+
+test("caesarCipher - test character shift", () => {
+  expect(jestTest.caesarCipher("xyz", 3)).toBe("abc");
+});
+
+test("caesarCipher - test case preservation", () => {
+  expect(jestTest.caesarCipher("HeLLo", 3)).toBe("KhOOr");
+});
+
+test("caesarCipher - test punctuation unchanged", () => {
+  expect(jestTest.caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});

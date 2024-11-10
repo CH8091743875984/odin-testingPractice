@@ -12,4 +12,20 @@ export function reverseString(string) {
   return string.split("").reverse().join("");
 }
 
+export function calculator(operator, a, b) {
+  if (operator === "add") {
+    return a + b;
+  }
+  if (operator === "subtract") {
+    return a - b;
+  }
+  if (operator === "divide") {
+    return a / b;
+  }
+  if (operator === "multiply") {
+    return a * b;
+  }
+  return null;
+}
+
 //module.exports = capitalize;

@@ -1,4 +1,11 @@
-function sum(a, b) {
+//do npm run watch to activate
+
+export function sum(a, b) {
   return a + b;
 }
-module.exports = sum;
+
+export function capitalize(string) {
+  return "Capital";
+}
+
+//module.exports = capitalize;

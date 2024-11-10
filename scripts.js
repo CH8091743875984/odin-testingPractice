@@ -50,3 +50,24 @@ export function caesarCipher(string, shiftFactor) {
     .map((char) => shiftChar(char, shiftFactor))
     .join("");
 }
+
+export function analyzeArray(array) {
+  //const resultsObject = { average: 4, min: 1, max: 8, length: 6 };
+  if (array.length === 0) {
+    return null;
+  }
+
+  const average = array.reduce((acc, num) => acc + num, 0) / array.length;
+  const min = Math.min(...array);
+  const max = Math.max(...array);
+  const length = array.length;
+
+  const resultsObject = {
+    average: average,
+    min: min,
+    max: max,
+    length: length,
+  };
+
+  return resultsObject;
+}

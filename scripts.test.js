@@ -33,3 +33,12 @@ test("caesarCipher - test case preservation", () => {
 test("caesarCipher - test punctuation unchanged", () => {
   expect(jestTest.caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
+
+test("analyzeArray - test object", () => {
+  const expectedObject = { average: 4, min: 1, max: 8, length: 6 };
+  expect(jestTest.analyzeArray([1, 8, 3, 4, 2, 6])).toEqual(expectedObject);
+});
+
+test("analyzeArray - empty array returns null", () => {
+  expect(jestTest.analyzeArray([])).toBeNull();
+});
